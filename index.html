@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabin Bhattarai - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-icons"></script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes pulseSlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulseSlow 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-inter">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#"
+                    class="text-2xl font-extrabold text-gray-800 tracking-tighter hover:text-blue-600 transition duration-300">
+                    Prabin Bhattarai
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Home</a>
+                    <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Projects</a>
+                    <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Blogs</a>
+                    <a href="#" class="text-gray-600 font-medium hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-blue-600 transition transform hover:scale-105">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-800 transition transform hover:scale-105">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white/95 z-40 hidden">
+            <div class="flex flex-col items-center justify-center h-full space-y-8 text-center">
+                <a href="#" class="text-2xl text-gray-800 font-semibold hover:text-blue-600 transition">Home</a>
+                <a href="#" class="text-2xl text-gray-800 font-semibold hover:text-blue-600 transition">Projects</a>
+                <a href="#" class="text-2xl text-gray-800 font-semibold hover:text-blue-600 transition">Blogs</a>
+                <a href="#" class="text-2xl text-gray-800 font-semibold hover:text-blue-600 transition">Contact</a>
+
+                <div class="flex space-x-6 pt-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition transform hover:scale-110">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800 transition transform hover:scale-110">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+            <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-600 hover:text-blue-600">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-52 pb-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Text Section -->
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 tracking-tight">
+                    Hello, I'm <span class="text-blue-600">Prabin Bhattarai</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    Software Engineer, Innovator, and Problem Solver.
+                </p>
+                <div class="mt-6 space-x-4">
+                    <a href="#projects"
+                        class="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500 transition">
+                        Explore My Work
+                    </a>
+                    <a href="#contact"
+                        class="inline-block px-8 py-3 bg-gray-100 text-gray-800 rounded-lg shadow-lg hover:bg-gray-200 transition">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="flex justify-center md:justify-end">
+                <div class="relative">
+                    <img src="your-photo.jpg" alt="Prabin Bhattarai"
+                        class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover">
+                    <span
+                        class="absolute inset-0 border-4 border-blue-600 rounded-full -z-10 animate-pulse-slow"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8">
+                About <span class="text-blue-600">Me</span>
+            </h2>
+    
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <!-- SVG Illustration -->
+                <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" class="text-blue-600">
+                        <!-- Engineer-themed SVG -->
+                        <circle cx="50" cy="50" r="45" stroke="black" stroke-width="3" fill="white"/>
+                        <path d="M30 60 C 40 50, 60 50, 70 60" stroke="black" stroke-width="3" fill="none"/>
+                        <line x1="50" y1="50" x2="50" y2="30" stroke="black" stroke-width="3"/>
+                        <line x1="45" y1="30" x2="55" y2="30" stroke="black" stroke-width="3"/>
+                        <rect x="40" y="70" width="20" height="10" fill="black"/>
+                        <line x1="50" y1="80" x2="50" y2="90" stroke="black" stroke-width="3"/>
+                        <path d="M30 90 C 35 100, 65 100, 70 90" stroke="black" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+    
+                <!-- Description Section -->
+                <div class="max-w-xl">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Hello! I'm <strong class="text-blue-600">Prabin Bhattarai</strong>, a passionate software engineer with a love for solving complex problems through code. I specialize in web development and mobile app creation, bringing ideas to life with clean, efficient, and maintainable code. My focus is on building user-friendly applications and scalable systems that meet real-world needs.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        I have a strong foundation in programming languages like JavaScript, PHP, and Python, and I enjoy working with modern frameworks such as React, Laravel, and Flutter. When I'm not coding, you'll find me exploring new technologies or engaging in creative problem-solving challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center mb-12">
+                My <span class="text-blue-600">Journey</span>
+            </h2>
+    
+            <div class="relative border-l border-gray-300">
+                <!-- Timeline Item 1 -->
+                <div class="mb-10 ml-6">
+                    <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
+                        <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+                    </span>
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">
+                            Software Engineer
+                        </h3>
+                        <p class="text-sm text-gray-500">Tech Innovators Pvt. Ltd. | Jan 2021 - Present</p>
+                        <p class="mt-2 text-gray-600 leading-relaxed">
+                            Working on designing and implementing scalable web and mobile applications using Laravel and Flutter.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Timeline Item 2 -->
+                <div class="mb-10 ml-6">
+                    <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+                    </span>
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">
+                            Bachelor's Degree in Computer Science
+                        </h3>
+                        <p class="text-sm text-gray-500">Tribhuvan University | Aug 2017 - Jun 2021</p>
+                        <p class="mt-2 text-gray-600 leading-relaxed">
+                            Completed my degree specializing in software development and machine learning.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Timeline Item 3 -->
+                <div class="mb-10 ml-6">
+                    <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full">
+                        <i data-lucide="school" class="w-4 h-4 text-white"></i>
+                    </span>
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">
+                            Higher Secondary Education
+                        </h3>
+                        <p class="text-sm text-gray-500">Nepal Higher Secondary School | 2015 - 2017</p>
+                        <p class="mt-2 text-gray-600 leading-relaxed">
+                            Majored in Science, building a strong foundation in mathematics and computer science.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16 tracking-tight">
+                Professional <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Skill Set</span>
+            </h2>
+    
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Skill Card Template -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a1.132 1.132 0 001.091 1.382h.959M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        JavaScript
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Full-stack development with modern JavaScript ecosystem
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Web Development
+                    </span>
+                </div>
+    
+                <!-- React Skill -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M14.25 6.087c0-1.256-.16-2.285-.44-2.98-.702-1.762-2.857-1.762-3.56 0-.279.695-.44 1.724-.44 2.98 0 1.257.161 2.285.44 2.98.703 1.762 2.857 1.762 3.56 0 .28-.695.44-1.724.44-2.98z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        React
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Building dynamic, responsive user interfaces
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Frontend
+                    </span>
+                </div>
+    
+                <!-- Laravel Skill -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        Laravel
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Robust backend solutions with elegant architecture
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Backend
+                    </span>
+                </div>
+    
+                <!-- Flutter Skill -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5h-3zm3 0h3V3h-3V1.5zm-3 15.75h3V12h-3v5.25z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        Flutter
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Cross-platform mobile app development
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Mobile
+                    </span>
+                </div>
+    
+                <!-- Python Skill -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.256 0 .512-.08.725-.231l2.289-1.626c.403-.287.86-.486 1.348-.58l3.332-.566a1.132 1.132 0 00.98-1.267c-.188-1.434-.6-4.162-1.5-6.615a9.301 9.301 0 00-6.127-5.579c-1.464-.408-2.888.734-2.888 2.262v.444c0 .909-.52 1.734-1.348 2.14L4.35 8.257c-.666.332-1.054 1.064-.95 1.814.194 1.371.533 2.816 1.13 4.118a2.25 2.25 0 001.345 1.06z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        Python
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Advanced data analysis and automation
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Data & Scripting
+                    </span>
+                </div>
+    
+                <!-- Node.js Skill -->
+                <div class="group bg-white border-2 border-gray-100 rounded-2xl p-6 text-center 
+                           transform transition duration-300 hover:-translate-y-4 hover:shadow-2xl 
+                           hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-100 hover:to-purple-100">
+                    <div class="bg-blue-50 w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center 
+                                group-hover:bg-white group-hover:shadow-lg transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                             class="w-10 h-10 text-blue-600 group-hover:text-blue-700 transition">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                  stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.051 0-2.084.128-3.087.36C2.87 4.208 2.46 5 2.25 5.09A9.013 9.013 0 004.5 12c0 2.848 1.619 5.304 4.03 6.55-.105-.898-.154-1.812-.154-2.74 0-5.522 4.389-10.125 9.824-10.125.99 0 1.953.119 2.875.34 0 0 .165.054.285.015a.805.805 0 00.291-.194 9.026 9.026 0 01-2.04-2.015A8.414 8.414 0 0015 3.75c-1.051 0-2.084.128-3.087.36-1.119.264-1.65 1.482-1.438 2.7.124.769.415 1.52.863 2.16.448.64.994 1.186 1.637 1.638.643.452 1.368.765 2.138.921.405.084.824.13 1.255.13h.116l.015.01z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-800 transition">
+                        Node.js
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 group-hover:text-gray-700 transition">
+                        Scalable server-side applications and APIs
+                    </p>
+                    <span class="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full 
+                                 group-hover:bg-blue-100 group-hover:text-blue-700 transition">
+                        Backend
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center mb-12">
+                My <span class="text-blue-600">Projects</span>
+            </h2>
+        
+            <!-- Scrollable Cards Container -->
+            <div class="relative">
+                <div class="flex space-x-6 overflow-hidden justify-center">
+                    <!-- Project Card 1 -->
+                    <div class="w-[300px] bg-white shadow-xl rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-40 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">E-Commerce Platform</h3>
+                        <p class="text-sm text-gray-500 mb-4">Full-stack e-commerce platform built with Laravel and React, featuring comprehensive product management and secure payment integration.</p>
+                        <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold">View Project</a>
+                    </div>
+        
+                    <!-- Project Card 2 -->
+                    <div class="w-[300px] bg-white shadow-xl rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-40 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Fitness Tracking App</h3>
+                        <p class="text-sm text-gray-500 mb-4">Mobile application for tracking fitness goals, with real-time progress monitoring and personalized workout recommendations.</p>
+                        <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold">View Project</a>
+                    </div>
+        
+                    <!-- Project Card 3 -->
+                    <div class="w-[300px] bg-white shadow-xl rounded-lg p-6 transform hover:scale-105 transition-all duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-40 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">AI Image Caption Generator</h3>
+                        <p class="text-sm text-gray-500 mb-4">Machine learning project using computer vision and natural language processing to generate contextual image descriptions.</p>
+                        <a href="#" class="inline-block text-blue-600 hover:text-blue-800 font-semibold">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M3 3h18c1.1 0 1.99.9 1.99 2L21 19c0 1.1-.89 2-1.99 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2zm9 14h-4v-5h4v5zm-2-5h2V8h-2v4zM7 7h2V5H7v2z" />
+                    </svg>
+                </a>
+    
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/your-profile" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M7 2h10c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm5 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zM7 20h10v-9H7v9zm5-4c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                    </svg>
+                </a>
+    
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/your-profile" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 8H7v4h2V8zm0 12h-2v-6h2v6zm9-12h-2V4c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v4h-2v4h2v12h4v-12h3l1-4h-4V4h3c1.1 0 2-.9 2-2V4z" />
+                    </svg>
+                </a>
+            </div>
+    
+            <p class="text-gray-400 text-sm">
+                &copy; 2024 Prabin Bhattarai. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <style>
+        /* Smooth fade-in for Mobile Menu */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+    </style>
+</body>
+
+</html>
